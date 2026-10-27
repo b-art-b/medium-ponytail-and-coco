@@ -1,0 +1,1 @@
+Fix Net revenue: it must always equal the sum of gross_cents minus refund_cents for the visible orders, including fully refunded and empty selections. Preserve existing widgets (including their keys), title, table, two-decimal monetary formatting and empty state. Include an AppTest regression exercising category changes and a return to All. No network access or data edits.

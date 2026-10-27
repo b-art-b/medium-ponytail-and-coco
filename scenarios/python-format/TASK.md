@@ -1,0 +1,1 @@
+Extend load_orders(path) to support UTF-8 .jsonl as well as CSV (case-insensitive suffix). Ignore blank JSONL lines. Each nonblank line must be an object with the same validation and canonical output as CSV. Reject malformed rows and unsupported formats, preserve order and the existing API, and do not change merge_orders. Include focused tests. Work only in this project.

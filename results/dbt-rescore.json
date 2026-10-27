@@ -1,0 +1,129 @@
+[
+  {
+    "id": "dbt-join-a-1",
+    "arm": "A",
+    "scenario": "dbt-join",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-a-2",
+    "arm": "A",
+    "scenario": "dbt-join",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-a-3",
+    "arm": "A",
+    "scenario": "dbt-join",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-b-1",
+    "arm": "B",
+    "scenario": "dbt-join",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-b-2",
+    "arm": "B",
+    "scenario": "dbt-join",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-b-3",
+    "arm": "B",
+    "scenario": "dbt-join",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-c-1",
+    "arm": "C",
+    "scenario": "dbt-join",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-c-2",
+    "arm": "C",
+    "scenario": "dbt-join",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-join-c-3",
+    "arm": "C",
+    "scenario": "dbt-join",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-a-1",
+    "arm": "A",
+    "scenario": "dbt-refunds",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-a-2",
+    "arm": "A",
+    "scenario": "dbt-refunds",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-a-3",
+    "arm": "A",
+    "scenario": "dbt-refunds",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-b-1",
+    "arm": "B",
+    "scenario": "dbt-refunds",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-b-2",
+    "arm": "B",
+    "scenario": "dbt-refunds",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-b-3",
+    "arm": "B",
+    "scenario": "dbt-refunds",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-c-1",
+    "arm": "C",
+    "scenario": "dbt-refunds",
+    "strict_status": "pass",
+    "models_only_status": "pass"
+  },
+  {
+    "id": "dbt-refunds-c-2",
+    "arm": "C",
+    "scenario": "dbt-refunds",
+    "strict_status": "evaluation_error",
+    "models_only_status": "evaluation_error",
+    "error": "RuntimeError: dbt build failed; see evidence"
+  },
+  {
+    "id": "dbt-refunds-c-3",
+    "arm": "C",
+    "scenario": "dbt-refunds",
+    "strict_status": "evaluation_error",
+    "models_only_status": "pass"
+  }
+]

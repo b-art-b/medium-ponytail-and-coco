@@ -1,0 +1,691 @@
+{
+  "runs": 72,
+  "expected_runs": 72,
+  "arms": {
+    "A": {
+      "completed": 24,
+      "passed": 20,
+      "median_agent_seconds_all": 101.34,
+      "median_agent_seconds_passed": 97.97,
+      "median_production_added_passed": 4.0,
+      "median_production_churn_passed": 4.5,
+      "median_test_added_passed": 81.0,
+      "median_turns_passed": 7.0,
+      "median_output_tokens_all": 4353.5,
+      "total_input_tokens": 181291,
+      "total_cache_creation_tokens": 2326772,
+      "total_cache_read_tokens": 13193369,
+      "total_output_tokens": 115350
+    },
+    "B": {
+      "completed": 24,
+      "passed": 20,
+      "median_agent_seconds_all": 99.45,
+      "median_agent_seconds_passed": 95.97,
+      "median_production_added_passed": 4.0,
+      "median_production_churn_passed": 4.0,
+      "median_test_added_passed": 65.5,
+      "median_turns_passed": 7.0,
+      "median_output_tokens_all": 3774.5,
+      "total_input_tokens": 139076,
+      "total_cache_creation_tokens": 2125382,
+      "total_cache_read_tokens": 12699058,
+      "total_output_tokens": 99953
+    },
+    "C": {
+      "completed": 24,
+      "passed": 22,
+      "median_agent_seconds_all": 89.78,
+      "median_agent_seconds_passed": 89.78,
+      "median_production_added_passed": 4.0,
+      "median_production_churn_passed": 4.0,
+      "median_test_added_passed": 36.5,
+      "median_turns_passed": 7.0,
+      "median_output_tokens_all": 3231.0,
+      "total_input_tokens": 144622,
+      "total_cache_creation_tokens": 2248675,
+      "total_cache_read_tokens": 12758716,
+      "total_output_tokens": 82968
+    }
+  },
+  "matched_successful_B_C": [
+    {
+      "scenario": "dt-corrections",
+      "repetition": 1,
+      "time_delta_seconds": -23.24,
+      "production_added_delta": 0,
+      "output_tokens_delta": -520
+    },
+    {
+      "scenario": "dt-corrections",
+      "repetition": 2,
+      "time_delta_seconds": 0.95,
+      "production_added_delta": 0,
+      "output_tokens_delta": -782
+    },
+    {
+      "scenario": "dt-corrections",
+      "repetition": 3,
+      "time_delta_seconds": 37.55,
+      "production_added_delta": 0,
+      "output_tokens_delta": -599
+    },
+    {
+      "scenario": "dt-region",
+      "repetition": 1,
+      "time_delta_seconds": -13.92,
+      "production_added_delta": 0,
+      "output_tokens_delta": -800
+    },
+    {
+      "scenario": "dt-region",
+      "repetition": 2,
+      "time_delta_seconds": -11.42,
+      "production_added_delta": 0,
+      "output_tokens_delta": -467
+    },
+    {
+      "scenario": "dt-region",
+      "repetition": 3,
+      "time_delta_seconds": 31.64,
+      "production_added_delta": 0,
+      "output_tokens_delta": -649
+    },
+    {
+      "scenario": "python-dedup",
+      "repetition": 1,
+      "time_delta_seconds": -24.68,
+      "production_added_delta": -1,
+      "output_tokens_delta": -580
+    },
+    {
+      "scenario": "python-dedup",
+      "repetition": 2,
+      "time_delta_seconds": 2.19,
+      "production_added_delta": -2,
+      "output_tokens_delta": -495
+    },
+    {
+      "scenario": "python-dedup",
+      "repetition": 3,
+      "time_delta_seconds": -34.77,
+      "production_added_delta": -2,
+      "output_tokens_delta": -607
+    },
+    {
+      "scenario": "python-format",
+      "repetition": 1,
+      "time_delta_seconds": 20.23,
+      "production_added_delta": -3,
+      "output_tokens_delta": -440
+    },
+    {
+      "scenario": "python-format",
+      "repetition": 2,
+      "time_delta_seconds": 11.58,
+      "production_added_delta": -11,
+      "output_tokens_delta": -983
+    },
+    {
+      "scenario": "python-format",
+      "repetition": 3,
+      "time_delta_seconds": -15.1,
+      "production_added_delta": -8,
+      "output_tokens_delta": -1222
+    },
+    {
+      "scenario": "streamlit-filter",
+      "repetition": 1,
+      "time_delta_seconds": 17.2,
+      "production_added_delta": 0,
+      "output_tokens_delta": -102
+    },
+    {
+      "scenario": "streamlit-filter",
+      "repetition": 2,
+      "time_delta_seconds": -6.08,
+      "production_added_delta": 0,
+      "output_tokens_delta": -611
+    },
+    {
+      "scenario": "streamlit-filter",
+      "repetition": 3,
+      "time_delta_seconds": 4.49,
+      "production_added_delta": 0,
+      "output_tokens_delta": 552
+    },
+    {
+      "scenario": "streamlit-totals",
+      "repetition": 1,
+      "time_delta_seconds": 9.94,
+      "production_added_delta": 0,
+      "output_tokens_delta": 257
+    },
+    {
+      "scenario": "streamlit-totals",
+      "repetition": 2,
+      "time_delta_seconds": -20.0,
+      "production_added_delta": 0,
+      "output_tokens_delta": -225
+    },
+    {
+      "scenario": "streamlit-totals",
+      "repetition": 3,
+      "time_delta_seconds": -12.15,
+      "production_added_delta": 0,
+      "output_tokens_delta": 147
+    }
+  ],
+  "scenarios": {
+    "dbt-join": {
+      "A": {
+        "passed": 0,
+        "completed": 3
+      },
+      "B": {
+        "passed": 0,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    },
+    "dbt-refunds": {
+      "A": {
+        "passed": 2,
+        "completed": 3
+      },
+      "B": {
+        "passed": 2,
+        "completed": 3
+      },
+      "C": {
+        "passed": 1,
+        "completed": 3
+      }
+    },
+    "dt-corrections": {
+      "A": {
+        "passed": 3,
+        "completed": 3
+      },
+      "B": {
+        "passed": 3,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    },
+    "dt-region": {
+      "A": {
+        "passed": 3,
+        "completed": 3
+      },
+      "B": {
+        "passed": 3,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    },
+    "python-dedup": {
+      "A": {
+        "passed": 3,
+        "completed": 3
+      },
+      "B": {
+        "passed": 3,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    },
+    "python-format": {
+      "A": {
+        "passed": 3,
+        "completed": 3
+      },
+      "B": {
+        "passed": 3,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    },
+    "streamlit-filter": {
+      "A": {
+        "passed": 3,
+        "completed": 3
+      },
+      "B": {
+        "passed": 3,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    },
+    "streamlit-totals": {
+      "A": {
+        "passed": 3,
+        "completed": 3
+      },
+      "B": {
+        "passed": 3,
+        "completed": 3
+      },
+      "C": {
+        "passed": 3,
+        "completed": 3
+      }
+    }
+  },
+  "failures": [
+    {
+      "id": "dbt-join-a-1",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-join-a-2",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-join-a-3",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-join-b-1",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-join-b-2",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-join-b-3",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-refunds-a-3",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-refunds-b-1",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-refunds-c-2",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    },
+    {
+      "id": "dbt-refunds-c-3",
+      "status": "evaluation_error",
+      "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+      "errors": null
+    }
+  ],
+  "models_only_dbt": {
+    "runs": 72,
+    "expected_runs": 72,
+    "arms": {
+      "A": {
+        "completed": 24,
+        "passed": 24,
+        "median_agent_seconds_all": 101.34,
+        "median_agent_seconds_passed": 101.34,
+        "median_production_added_passed": 5.0,
+        "median_production_churn_passed": 5.5,
+        "median_test_added_passed": 76.0,
+        "median_turns_passed": 7.0,
+        "median_output_tokens_all": 4353.5,
+        "total_input_tokens": 181291,
+        "total_cache_creation_tokens": 2326772,
+        "total_cache_read_tokens": 13193369,
+        "total_output_tokens": 115350
+      },
+      "B": {
+        "completed": 24,
+        "passed": 24,
+        "median_agent_seconds_all": 99.45,
+        "median_agent_seconds_passed": 99.45,
+        "median_production_added_passed": 4.5,
+        "median_production_churn_passed": 5.0,
+        "median_test_added_passed": 61.0,
+        "median_turns_passed": 7.0,
+        "median_output_tokens_all": 3774.5,
+        "total_input_tokens": 139076,
+        "total_cache_creation_tokens": 2125382,
+        "total_cache_read_tokens": 12699058,
+        "total_output_tokens": 99953
+      },
+      "C": {
+        "completed": 24,
+        "passed": 23,
+        "median_agent_seconds_all": 89.78,
+        "median_agent_seconds_passed": 89.75,
+        "median_production_added_passed": 4,
+        "median_production_churn_passed": 4,
+        "median_test_added_passed": 36,
+        "median_turns_passed": 7,
+        "median_output_tokens_all": 3231.0,
+        "total_input_tokens": 144622,
+        "total_cache_creation_tokens": 2248675,
+        "total_cache_read_tokens": 12758716,
+        "total_output_tokens": 82968
+      }
+    },
+    "matched_successful_B_C": [
+      {
+        "scenario": "dbt-join",
+        "repetition": 1,
+        "time_delta_seconds": -13.5,
+        "production_added_delta": 0,
+        "output_tokens_delta": -661
+      },
+      {
+        "scenario": "dbt-join",
+        "repetition": 2,
+        "time_delta_seconds": -23.15,
+        "production_added_delta": -2,
+        "output_tokens_delta": -1001
+      },
+      {
+        "scenario": "dbt-join",
+        "repetition": 3,
+        "time_delta_seconds": 8.74,
+        "production_added_delta": 5,
+        "output_tokens_delta": -1222
+      },
+      {
+        "scenario": "dbt-refunds",
+        "repetition": 1,
+        "time_delta_seconds": -22.5,
+        "production_added_delta": 2,
+        "output_tokens_delta": -1587
+      },
+      {
+        "scenario": "dbt-refunds",
+        "repetition": 3,
+        "time_delta_seconds": -51.44,
+        "production_added_delta": -23,
+        "output_tokens_delta": -1911
+      },
+      {
+        "scenario": "dt-corrections",
+        "repetition": 1,
+        "time_delta_seconds": -23.24,
+        "production_added_delta": 0,
+        "output_tokens_delta": -520
+      },
+      {
+        "scenario": "dt-corrections",
+        "repetition": 2,
+        "time_delta_seconds": 0.95,
+        "production_added_delta": 0,
+        "output_tokens_delta": -782
+      },
+      {
+        "scenario": "dt-corrections",
+        "repetition": 3,
+        "time_delta_seconds": 37.55,
+        "production_added_delta": 0,
+        "output_tokens_delta": -599
+      },
+      {
+        "scenario": "dt-region",
+        "repetition": 1,
+        "time_delta_seconds": -13.92,
+        "production_added_delta": 0,
+        "output_tokens_delta": -800
+      },
+      {
+        "scenario": "dt-region",
+        "repetition": 2,
+        "time_delta_seconds": -11.42,
+        "production_added_delta": 0,
+        "output_tokens_delta": -467
+      },
+      {
+        "scenario": "dt-region",
+        "repetition": 3,
+        "time_delta_seconds": 31.64,
+        "production_added_delta": 0,
+        "output_tokens_delta": -649
+      },
+      {
+        "scenario": "python-dedup",
+        "repetition": 1,
+        "time_delta_seconds": -24.68,
+        "production_added_delta": -1,
+        "output_tokens_delta": -580
+      },
+      {
+        "scenario": "python-dedup",
+        "repetition": 2,
+        "time_delta_seconds": 2.19,
+        "production_added_delta": -2,
+        "output_tokens_delta": -495
+      },
+      {
+        "scenario": "python-dedup",
+        "repetition": 3,
+        "time_delta_seconds": -34.77,
+        "production_added_delta": -2,
+        "output_tokens_delta": -607
+      },
+      {
+        "scenario": "python-format",
+        "repetition": 1,
+        "time_delta_seconds": 20.23,
+        "production_added_delta": -3,
+        "output_tokens_delta": -440
+      },
+      {
+        "scenario": "python-format",
+        "repetition": 2,
+        "time_delta_seconds": 11.58,
+        "production_added_delta": -11,
+        "output_tokens_delta": -983
+      },
+      {
+        "scenario": "python-format",
+        "repetition": 3,
+        "time_delta_seconds": -15.1,
+        "production_added_delta": -8,
+        "output_tokens_delta": -1222
+      },
+      {
+        "scenario": "streamlit-filter",
+        "repetition": 1,
+        "time_delta_seconds": 17.2,
+        "production_added_delta": 0,
+        "output_tokens_delta": -102
+      },
+      {
+        "scenario": "streamlit-filter",
+        "repetition": 2,
+        "time_delta_seconds": -6.08,
+        "production_added_delta": 0,
+        "output_tokens_delta": -611
+      },
+      {
+        "scenario": "streamlit-filter",
+        "repetition": 3,
+        "time_delta_seconds": 4.49,
+        "production_added_delta": 0,
+        "output_tokens_delta": 552
+      },
+      {
+        "scenario": "streamlit-totals",
+        "repetition": 1,
+        "time_delta_seconds": 9.94,
+        "production_added_delta": 0,
+        "output_tokens_delta": 257
+      },
+      {
+        "scenario": "streamlit-totals",
+        "repetition": 2,
+        "time_delta_seconds": -20.0,
+        "production_added_delta": 0,
+        "output_tokens_delta": -225
+      },
+      {
+        "scenario": "streamlit-totals",
+        "repetition": 3,
+        "time_delta_seconds": -12.15,
+        "production_added_delta": 0,
+        "output_tokens_delta": 147
+      }
+    ],
+    "scenarios": {
+      "dbt-join": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      },
+      "dbt-refunds": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 2,
+          "completed": 3
+        }
+      },
+      "dt-corrections": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      },
+      "dt-region": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      },
+      "python-dedup": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      },
+      "python-format": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      },
+      "streamlit-filter": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      },
+      "streamlit-totals": {
+        "A": {
+          "passed": 3,
+          "completed": 3
+        },
+        "B": {
+          "passed": 3,
+          "completed": 3
+        },
+        "C": {
+          "passed": 3,
+          "completed": 3
+        }
+      }
+    },
+    "failures": [
+      {
+        "id": "dbt-refunds-c-2",
+        "status": "evaluation_error",
+        "evaluation_error": "RuntimeError: dbt build failed; see evidence",
+        "errors": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+[{"order_id": "a", "category": "Books", "region": "North", "gross_cents": 1000, "refund_cents": 200}, {"order_id": "b", "category": "Books", "region": "South", "gross_cents": 500, "refund_cents": 500}, {"order_id": "c", "category": "Games", "region": "North", "gross_cents": 2000, "refund_cents": 0}]

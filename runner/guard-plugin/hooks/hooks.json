@@ -1,0 +1,1 @@
+{"hooks":{"PreToolUse":[{"matcher":".*","hooks":[{"type":"command","command":"/opt/homebrew/bin/python3 \"${CLAUDE_PLUGIN_ROOT}/guard.py\"","timeout":10}]}]}}

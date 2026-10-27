@@ -1,0 +1,4 @@
+order_id,customer_id,order_day,gross_cents
+a,c1,2026-01-01,1000
+b,c2,2026-01-01,500
+c,c1,2026-01-02,2000

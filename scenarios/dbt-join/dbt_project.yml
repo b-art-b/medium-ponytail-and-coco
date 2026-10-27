@@ -1,0 +1,9 @@
+name: retail_benchmark
+version: '1.0.0'
+config-version: 2
+profile: retail_benchmark
+model-paths: [models]
+seed-paths: [seeds]
+models:
+  retail_benchmark:
+    +materialized: table

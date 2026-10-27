@@ -1,0 +1,1 @@
+Add a Category selectbox (key category) with All, Books, Games, Clothing. Default All. Both metrics and the table must reflect the selected category. For no matches retain the empty table, show zero metrics and the information message No matching orders. Preserve title, monetary formatting and data columns. Include AppTest coverage. No network access or data edits.

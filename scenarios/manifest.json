@@ -1,0 +1,80 @@
+{
+  "python-format": {
+    "kind": "python",
+    "prompt": "Extend load_orders(path) to support UTF-8 .jsonl as well as CSV (case-insensitive suffix). Ignore blank JSONL lines. Each nonblank line must be an object with the same validation and canonical output as CSV. Reject malformed rows and unsupported formats, preserve order and the existing API, and do not change merge_orders. Include focused tests. Work only in this project.",
+    "fixture_files": {
+      "ingest.py": "bb05b6fe4b8cc0c807124f586f7f671d01b0f693159bc94c8512a598e0b383ce",
+      "test_public.py": "1c3b9f62009c748440ec848b135186f391dabcf1e29d08bd68dd2925206100b3"
+    }
+  },
+  "python-dedup": {
+    "kind": "python",
+    "prompt": "Fix merge_orders(existing, incoming): one record per order_id, with the last incoming value winning (corrections replace previous values). Preserve original order for existing IDs, append new IDs in first-seen order. Do not mutate either input, including on error. Validate ALL incoming rows before returning. Preserve load_orders behavior and API. Include focused regression tests. Work only in this project.",
+    "fixture_files": {
+      "ingest.py": "bb05b6fe4b8cc0c807124f586f7f671d01b0f693159bc94c8512a598e0b383ce",
+      "test_public.py": "1c3b9f62009c748440ec848b135186f391dabcf1e29d08bd68dd2925206100b3"
+    }
+  },
+  "streamlit-filter": {
+    "kind": "streamlit",
+    "prompt": "Add a Category selectbox (key category) with All, Books, Games, Clothing. Default All. Both metrics and the table must reflect the selected category. For no matches retain the empty table, show zero metrics and the information message No matching orders. Preserve title, monetary formatting and data columns. Include AppTest coverage. No network access or data edits.",
+    "fixture_files": {
+      "app.py": "9eb8ec335c636bbb26bcdde553b935a58b5223ceef942a7c84c4b23c62fe4983",
+      "orders.json": "37c621c85d1f0f65bd99d6cebd23706ffa81338a57871abca82b351462ccfce9",
+      "test_public.py": "df902ed3a9e6697c84a8f4c3bb785aeac977943916dd37d12a76f7214e78fcba"
+    }
+  },
+  "streamlit-totals": {
+    "kind": "streamlit",
+    "prompt": "Fix Net revenue: it must always equal the sum of gross_cents minus refund_cents for the visible orders, including fully refunded and empty selections. Preserve existing widgets (including their keys), title, table, two-decimal monetary formatting and empty state. Include an AppTest regression exercising category changes and a return to All. No network access or data edits.",
+    "fixture_files": {
+      "app.py": "b06b1e37ed72b75245fa5634dbab3a5b8b4609949e2eef31ffbf2c3f28109ebf",
+      "orders.json": "37c621c85d1f0f65bd99d6cebd23706ffa81338a57871abca82b351462ccfce9",
+      "test_public.py": "df902ed3a9e6697c84a8f4c3bb785aeac977943916dd37d12a76f7214e78fcba"
+    }
+  },
+  "dbt-refunds": {
+    "kind": "dbt",
+    "prompt": "Fix daily_revenue to produce one row per order_day and net_cents = gross less ALL refunds attached to orders on that day. Multiple partial refunds are additive; unrefunded orders retain gross and fully refunded orders contribute zero. Attribute refunds to order day. Do not change the unrelated regional_revenue model or seed inputs. Add appropriate dbt tests. The evaluator runs seed and build in an isolated Snowflake schema; credentials are not included.",
+    "fixture_files": {
+      "dbt_project.yml": "24fef070e0d4d900ece3cafcf63283497ddd204424350c7083986b5593bc9662",
+      "seeds/orders.csv": "96f4e3fbd60ee0f2ca8931883546e80e74ae2923faa61014edf088825ea0b88e",
+      "seeds/refunds.csv": "33c0603d593cd9fca610fd0a1e3876a0c6d531e623077331d51674784a8510fb",
+      "seeds/customers.csv": "28e6b31e4da9e67c33e02b50852689d111d04bc8c8c32704ac218630252d3ab6",
+      "models/stg_orders.sql": "281b3fe9d6aec6f66a95d12e699d7c31d83fafe4c38787b6d5bfb2fd909ef4db",
+      "models/current_customers.sql": "11de0a2ecc76cf866ca818ae8b70618c151438d4dcb57d8232020be5f262f415",
+      "models/daily_revenue.sql": "76c328b54635c486ec32760e745e304820b5e9b0786e3c662fa2338f2da785dd",
+      "models/regional_revenue.sql": "65c500ac6981a237227899f7aa1499df5d1d4b14a5b860bdaf9ecb998305c45c",
+      "models/schema.yml": "81028c4557dfc54cdfcc0ce0cc6bf6bbca1ae6101196e48f6c83e02c082bb9e1"
+    }
+  },
+  "dbt-join": {
+    "kind": "dbt",
+    "prompt": "Fix regional_revenue to count each order once using its customer's latest dimension version (highest version number). Preserve columns region/gross_cents, inner-join behavior for unknown customers, and unrelated daily_revenue behavior. Do not change seed inputs. Add dbt regression tests. The evaluator runs seed and build in an isolated Snowflake schema; credentials are not included.",
+    "fixture_files": {
+      "dbt_project.yml": "24fef070e0d4d900ece3cafcf63283497ddd204424350c7083986b5593bc9662",
+      "seeds/orders.csv": "96f4e3fbd60ee0f2ca8931883546e80e74ae2923faa61014edf088825ea0b88e",
+      "seeds/refunds.csv": "33c0603d593cd9fca610fd0a1e3876a0c6d531e623077331d51674784a8510fb",
+      "seeds/customers.csv": "28e6b31e4da9e67c33e02b50852689d111d04bc8c8c32704ac218630252d3ab6",
+      "models/stg_orders.sql": "281b3fe9d6aec6f66a95d12e699d7c31d83fafe4c38787b6d5bfb2fd909ef4db",
+      "models/current_customers.sql": "11de0a2ecc76cf866ca818ae8b70618c151438d4dcb57d8232020be5f262f415",
+      "models/daily_revenue.sql": "76c328b54635c486ec32760e745e304820b5e9b0786e3c662fa2338f2da785dd",
+      "models/regional_revenue.sql": "65c500ac6981a237227899f7aa1499df5d1d4b14a5b860bdaf9ecb998305c45c",
+      "models/schema.yml": "81028c4557dfc54cdfcc0ce0cc6bf6bbca1ae6101196e48f6c83e02c082bb9e1"
+    }
+  },
+  "dt-region": {
+    "kind": "dynamic-table",
+    "prompt": "Extend pipeline.sql with a regional_sales Dynamic Table: order_day, region, net_cents, grouped by day/region from existing cleaned orders. Preserve clean_orders and daily_sales behavior and existing refresh configuration. Use only raw_orders and existing pipeline objects in the current isolated schema; no database/schema/role creation. Evaluator supplies COMPUTE_WH, seed data and manual refreshes. Add a local check or test for your new logic. Do not access a real account directly.",
+    "fixture_files": {
+      "pipeline.sql": "b17239764736fb3e002479daf736edb42e70cf20a74a3671e63424ceadf1f21b"
+    }
+  },
+  "dt-corrections": {
+    "kind": "dynamic-table",
+    "prompt": "Fix daily_sales so net_cents includes all current orders, subtracting refunds (NULL means zero), including fully and partially refunded orders. Must reflect insert/update/delete changes after manual refresh without filtering out corrected or historical orders. Preserve clean_orders, daily_sales columns and existing refresh configuration. Only current-schema pipeline objects and raw_orders are permitted. Evaluator supplies COMPUTE_WH and raw rows; do not access a real account directly. Add a local check or test.",
+    "fixture_files": {
+      "pipeline.sql": "0f056117616318319d565381b57b673d82f308407c871f05b22962facd7f24e5"
+    }
+  }
+}
